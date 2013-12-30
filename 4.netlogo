@@ -1,0 +1,15 @@
+to f[p]
+  file-open p
+  let g random 50
+  crt 128 
+  repeat g [
+    let b []
+    repeat g [
+      ask one-of turtles [
+        set b fput who b
+      ]
+    ]
+    file-print reduce [(word ?1 ?2)] b
+  ]
+  
+end
